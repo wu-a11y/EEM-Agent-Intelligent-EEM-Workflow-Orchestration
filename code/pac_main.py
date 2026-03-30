@@ -388,7 +388,7 @@ if __name__ == "__main__":
     RUN_STEP3 = True
 
     #  [3, 4, 5] list(range(2, 7))
-    PARAFAC_COMPONENTS = [2]
+    PARAFAC_COMPONENTS = [2,3,4,5,6]
 
     #  N 0 
     RESIDUAL_SAMPLE_COUNT = 0

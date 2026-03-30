@@ -523,6 +523,8 @@ def run_single_method(method_id, input_folder, output_folder, picture_folder,
         try:
             read_start = time.time()
             df = pd.read_excel(file_path, header=None)
+            # Drop empty columns (e.g. Unnamed columns with NaN values)
+            df = df.dropna(axis=1, how="all")
             Em = np.array(df.iloc[1:, 0], dtype=float)
             Ex = np.array(df.iloc[0, 1:], dtype=float)
             data = df.iloc[1:, 1:].values.astype(float)
